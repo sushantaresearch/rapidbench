@@ -1,0 +1,11 @@
+```json
+{
+  "failures": [
+    {
+      "class": "Anomalous Duty Rates",
+      "evidence": "The `duty_rate` column's profile has changed significantly. The number of unique values increased from 10 to 15, and the maximum value changed from 0.25 to an unusual 0.251212. The mean and median rates also increased. Since duty rates are typically fixed, discrete values from a tariff schedule, these changes suggest a data entry or processing error that will directly distort total duty revenue (s1), chapter shares (s2), and the effective duty rate (s3).",
+      "severity": "medium"
+    }
+  ]
+}
+```

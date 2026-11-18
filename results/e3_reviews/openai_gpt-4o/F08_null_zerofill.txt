@@ -1,0 +1,3 @@
+```json
+{"failures": [{"class": "cif_usd_min_value", "evidence": "The minimum value of cif_usd in the current batch is 0.0, which is not possible for a valid transaction.", "severity": "high"}]}
+```

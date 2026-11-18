@@ -1,0 +1,21 @@
+```json
+{
+  "failures": [
+    {
+      "class": "qty",
+      "evidence": "The max qty in the current batch (5,640,087.481487) is significantly higher than the reference window max qty (12,552.478844), which could distort undervaluation screening.",
+      "severity": "high"
+    },
+    {
+      "class": "qty",
+      "evidence": "The mean qty in the current batch (10,774.278867) is much higher than the reference window mean qty (213.488848), affecting undervaluation screening metrics.",
+      "severity": "medium"
+    },
+    {
+      "class": "qty",
+      "evidence": "The std qty in the current batch (97,064.501532) is vastly larger than the reference window std qty (448.496336), indicating potential data-quality issues in quantity reporting.",
+      "severity": "medium"
+    }
+  ]
+}
+```

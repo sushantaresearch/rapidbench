@@ -1,0 +1,21 @@
+```json
+{
+  "failures": [
+    {
+      "class": "distributional shift",
+      "evidence": "Top 5 chapters in the current batch do not match the reference window, with '29' and '52' appearing in the current batch but not in the reference window, and '10' and '62' appearing in the reference window but not in the current batch.",
+      "severity": "medium"
+    },
+    {
+      "class": "distributional shift",
+      "evidence": "Top 5 HS6 codes in the current batch do not match the reference window, with '016545' appearing in the current batch but not in the reference window, and '629706' appearing in the reference window but not in the current batch.",
+      "severity": "low"
+    },
+    {
+      "class": "distributional shift",
+      "evidence": "Top 5 importer IDs in the current batch do not match the reference window, with '1253' and '1290' appearing in the current batch but not in the reference window, and '1156' and '1259' appearing in the reference window but with different frequencies in the current batch.",
+      "severity": "low"
+    }
+  ]
+}
+```

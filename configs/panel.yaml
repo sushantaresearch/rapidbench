@@ -1,0 +1,13 @@
+# E1 generation panel. Requires OPENROUTER_API_KEY in the environment.
+# IMPORTANT: model IDs on OpenRouter drift over time. Verify every ID at
+# https://openrouter.ai/models immediately before the real run and edit
+# this list to the current identifiers. Nothing below is called until
+# `python3 -m rapidbench.panel --config configs/panel.yaml` is executed.
+models:
+  - openai/gpt-4o
+  - anthropic/claude-sonnet-4.5
+  - google/gemini-2.5-pro
+  - meta-llama/llama-3.3-70b-instruct
+  - deepseek/deepseek-chat
+k: 3            # samples per model, frozen in prompt v0.2
+temperature: 0.2

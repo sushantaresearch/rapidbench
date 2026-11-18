@@ -1,0 +1,11 @@
+```json
+{
+    "failures": [
+        {
+            "class": "hs6_format",
+            "evidence": "Current batch hs6 top5 values include '14388' and '87860', which are not zero-padded to 6 digits.",
+            "severity": "medium"
+        }
+    ]
+}
+```

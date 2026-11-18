@@ -1,0 +1,1 @@
+{"failures": [{"class": "data_distribution", "evidence": "qty column has a max value of 5640087.481487, which is significantly higher than the reference window max value of 12552.478844", "severity": "high"}]}

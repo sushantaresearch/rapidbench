@@ -1,0 +1,14 @@
+injector,expect_column_values_to_match_regex,expect_column_values_to_be_between,expect_compound_columns_to_be_unique,any_fired,runtime_s
+CONTROL_clean,False,False,False,False,5.68
+F01_hs_leading_zero_loss,True,False,False,True,0.2
+F02_unit_qty_mismatch,False,False,False,False,0.2
+F03_fx_stale_rate,False,False,False,False,0.2
+F04_cif_fob_conflation,False,False,False,False,0.19
+F05_tariff_year_misjoin,False,False,False,False,0.21
+F06_outcome_leakage,False,False,False,False,0.21
+F07_duplicate_amendments,False,False,True,True,0.2
+F08_null_zerofill,False,True,False,True,0.18
+F09_partner_swap,False,False,False,False,0.19
+F10_schema_drift_fallback,False,False,False,False,0.22
+F11_dedup_overreach,False,False,False,False,0.2
+F12_country_code_drift,False,False,False,False,0.18

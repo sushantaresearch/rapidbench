@@ -1,0 +1,11 @@
+```json
+{
+  "failures": [
+    {
+      "class": "Outliers",
+      "evidence": "The `qty` column's distribution has been severely distorted by extreme positive outliers. The mean has increased from ~213 to ~10,774 (~50x) and the max value has increased from ~12,552 to ~5,640,087 (~450x), while the median remains stable. This will create artificially low unit prices (`cif_usd`/`qty`), which will materially inflate the `s4_undervaluation_screen_rate` by causing valid declarations to be flagged as potentially undervalued.",
+      "severity": "high"
+    }
+  ]
+}
+```

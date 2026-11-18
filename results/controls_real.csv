@@ -1,0 +1,5 @@
+substrate,tier,fired,hits
+date,V1_rules,True,R4_cif_fob_ratio
+date,V2_drift,False,share=0.000
+ctgan,V1_rules,False,
+ctgan,V2_drift,False,share=0.000

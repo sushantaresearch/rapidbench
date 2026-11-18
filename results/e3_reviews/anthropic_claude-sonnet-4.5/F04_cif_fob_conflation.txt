@@ -1,0 +1,21 @@
+```json
+{
+  "failures": [
+    {
+      "class": "chapter_derivation_logic_error",
+      "evidence": "Pipeline function s2_duty_by_chapter uses str.zfill(1) which pads to only 1 character, but chapter codes require 2 digits. This will fail to extract proper 2-digit chapters from hs6 codes (e.g., hs6='014388' → zfill(1)='014388' → [:2]='01' works by accident, but hs6='3909' → zfill(1)='3909' → [:2]='39' also works). However, the logic is incorrect: should be zfill(6) not zfill(1). This will cause chapter misclassification for any hs6 values stored as integers or with leading zeros stripped, materially distorting chapter duty shares.",
+      "severity": "high"
+    },
+    {
+      "class": "cif_fob_value_inconsistency",
+      "evidence": "Current batch shows cif_usd mean (18073.98) is higher than fob_usd mean (16796.84), which is correct (CIF = FOB + insurance + freight). However, reference window shows cif_usd mean (18137.44) vs fob_usd mean (16796.84) - identical fob_usd means across batches but different cif_usd means. The current batch cif_usd decreased by 0.35% while fob_usd remained identical, suggesting potential systematic underreporting of freight/insurance costs in current batch, which would distort effective duty rate calculations.",
+      "severity": "medium"
+    },
+    {
+      "class": "duty_revenue_underreporting",
+      "evidence": "Current batch duty_paid_usd mean decreased from 1476.78 to 1471.57 (0.35% drop) while duty_rate distribution remains identical (mean 0.082159, same std). The cif_usd base also decreased by 0.35%. This proportional decrease across duty_paid_usd and cif_usd suggests potential systematic undervaluation in current batch that would reduce total duty revenue by approximately 0.35%, material for revenue analytics.",
+      "severity": "medium"
+    }
+  ]
+}
+```

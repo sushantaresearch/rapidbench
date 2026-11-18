@@ -1,0 +1,26 @@
+```json
+{
+  "failures": [
+    {
+      "class": "cif_usd/fob_usd swap",
+      "evidence": "Current batch cif_usd statistics (mean=16796.84, median=8950.13, max=750524.11) exactly match reference fob_usd, while reference cif_usd had mean=18137.44, median=9688.72, max=831662.16. CIF should exceed FOB due to insurance and freight costs.",
+      "severity": "high"
+    },
+    {
+      "class": "duty_paid_usd understatement",
+      "evidence": "Current batch duty_paid_usd mean decreased 7.4% (1367.93 vs 1476.78) and max decreased 9.8% (187631.03 vs 207915.54) while cif_usd and duty_rate distributions remain identical. This will materially understate total duty revenue (s1) and distort chapter shares (s2).",
+      "severity": "high"
+    },
+    {
+      "class": "effective_duty_rate distortion",
+      "evidence": "The cif_usd/fob_usd swap combined with reduced duty_paid_usd will artificially inflate the effective duty rate calculation (s3: duty_paid_usd / cif_usd) since the denominator is now ~7.4% lower than it should be.",
+      "severity": "high"
+    },
+    {
+      "class": "undervaluation_screen_rate distortion",
+      "evidence": "The undervaluation screen (s4) calculates cif_usd/qty ratios. Using fob_usd values instead of cif_usd will systematically lower unit values by ~7-8%, causing false positives in the <0.5*median threshold test.",
+      "severity": "high"
+    }
+  ]
+}
+```

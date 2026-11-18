@@ -1,0 +1,22 @@
+{
+  "experiment": "E1",
+  "mode": "e1_mock",
+  "client": "MockClient",
+  "models": [
+    "mock/correct",
+    "mock/bug-hs-dtype",
+    "mock/bug-rate-agg",
+    "mock/contract-violation",
+    "mock/crash"
+  ],
+  "k": 2,
+  "temperature": 0.2,
+  "prompt_sha256_16": "7a5e9d107eecb4ea",
+  "substrate": {
+    "kind": "synthetic",
+    "n": 20000,
+    "seed": 42
+  },
+  "materiality_rdm": 0.01,
+  "generated_utc": "2026-07-02T16:48:47Z"
+}

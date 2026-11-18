@@ -1,0 +1,11 @@
+```json
+{
+  "failures": [
+    {
+      "class": "chapter_derivation_logic_error",
+      "evidence": "s2_duty_by_chapter uses str.zfill(1) which pads to only 1 character, but chapter codes require 2 digits. hs6='014388' would become '0' instead of '01', causing all chapters to collapse to single digits and severely distorting chapter duty shares.",
+      "severity": "high"
+    }
+  ]
+}
+```

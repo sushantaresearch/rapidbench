@@ -1,0 +1,11 @@
+model,sample,verdict,ok,rdm_s1,rdm_s2,rdm_s3,rdm_s4,rdm_s5,code_sha,runtime_s,error
+mock/correct,0,correct,True,0.0,0.0,0.0,0.0,0.0,7f819f7fd76a,0.61,
+mock/correct,1,correct,True,0.0,0.0,0.0,0.0,0.0,7f819f7fd76a,0.57,
+mock/bug-hs-dtype,0,defective:s2_chapter_duty_share,True,0.0,0.539419,0.0,0.0,0.0,312224dc29fc,0.58,
+mock/bug-hs-dtype,1,defective:s2_chapter_duty_share,True,0.0,0.539419,0.0,0.0,0.0,312224dc29fc,0.61,
+mock/bug-rate-agg,0,correct,True,0.0,0.0,0.009051,0.0,0.0,aa841391b9d9,0.58,
+mock/bug-rate-agg,1,correct,True,0.0,0.0,0.009051,0.0,0.0,aa841391b9d9,0.57,
+mock/contract-violation,0,contract_violation,False,,,,,,ac4a51bb8404,0.03,"contract keys missing: ['s1_duty_by_month', 's2_chapter_duty_share', 's3_effective_duty_rate', 's4_uv_below_half_median_share', 's5_top_origin_duty_share']"
+mock/contract-violation,1,contract_violation,False,,,,,,ac4a51bb8404,0.03,"contract keys missing: ['s1_duty_by_month', 's2_chapter_duty_share', 's3_effective_duty_rate', 's4_uv_below_half_median_share', 's5_top_origin_duty_share']"
+mock/crash,0,crash,False,,,,,,9e5ed1d497f7,0.02,exit 1: ValueError: boom
+mock/crash,1,crash,False,,,,,,9e5ed1d497f7,0.02,exit 1: ValueError: boom

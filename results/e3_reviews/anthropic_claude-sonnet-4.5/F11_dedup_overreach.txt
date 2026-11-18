@@ -1,0 +1,21 @@
+```json
+{
+  "failures": [
+    {
+      "class": "duplicate_records",
+      "evidence": "Current batch has 19,659 rows but only 19,659 unique decl_id values, while reference has 20,000 rows with 20,000 unique decl_id. The batch appears to have ~341 missing records (1.7% loss). Additionally, all value columns (cif_usd, fob_usd, qty) show exactly 19,659 unique values matching row count, suggesting potential record loss rather than legitimate duplicates.",
+      "severity": "high"
+    },
+    {
+      "class": "chapter_derivation_error",
+      "evidence": "Pipeline s2_duty_by_chapter derives chapter using str.zfill(1).str[:2] which only zero-pads to 1 character, not 2. This means single-digit hs6 codes (e.g., '1xxxxx') would become '1' (1 char) then slice to '1' (chapter '1'), but two-digit codes work correctly. The reference shows chapter '01' exists with 1,282 records, but with zfill(1), hs6 codes like '014388' would produce chapter '01' correctly only if already 2+ digits. However, if any hs6 started with single digit without leading zero, they'd be miscategorized, distorting chapter shares.",
+      "severity": "high"
+    },
+    {
+      "class": "undervaluation_screen_logic_error",
+      "evidence": "Function s4_undervaluation_screen_rate divides cif_usd by qty without handling potential zero or near-zero qty values. While current batch shows min qty of 1.0, the logic calculates unit values then compares to 0.5*median per hs6. With 64 hs6 codes and potential for extreme unit values from small quantities, this could produce unstable screening rates. The mean screening rate calculation across all records may be distorted by outlier unit values.",
+      "severity": "medium"
+    }
+  ]
+}
+```

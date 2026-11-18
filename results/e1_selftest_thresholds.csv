@@ -1,0 +1,5 @@
+pipeline,rdm_s1_pct,rdm_s2_pct,rdm_s3_pct,rdm_s4_pct,rdm_s5_pct,verdict_at_1pct,verdict_at_0.5pct
+P_ref_correct,0.0,0.0,0.0,0.0,0.0,correct,correct
+P_bug_hs_dtype,0.0,53.942,0.0,0.0,0.0,defective:s2_chapter_duty_share,defective:s2_chapter_duty_share
+P_bug_rate_agg,0.0,0.0,0.905,0.0,0.0,correct,defective:s3_effective_duty_rate
+P_bug_fob_denom,0.0,0.0,7.981,0.0,0.0,defective:s3_effective_duty_rate,defective:s3_effective_duty_rate

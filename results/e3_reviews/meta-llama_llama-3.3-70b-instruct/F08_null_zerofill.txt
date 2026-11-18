@@ -1,0 +1,11 @@
+```json
+{
+  "failures": [
+    {
+      "class": "Data Quality",
+      "evidence": "Minimum value of cif_usd is 0.0, which is less than the minimum value in the reference window (137.420239)",
+      "severity": "medium"
+    }
+  ]
+}
+```

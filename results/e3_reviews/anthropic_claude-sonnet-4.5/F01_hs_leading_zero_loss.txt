@@ -1,0 +1,11 @@
+```json
+{
+  "failures": [
+    {
+      "class": "hs6_format_inconsistency",
+      "evidence": "Current batch hs6 top5 shows values without leading zeros ('14388', '87860') while reference shows zero-padded values ('014388', '087860'). Pipeline s2_duty_by_chapter derives chapter via str.zfill(1).str[:2] which only pads to 1 character, failing to extract correct 2-digit chapter from non-padded hs6 codes (e.g., '14388'[:2]='14' vs correct '01', '87860'[:2]='87' vs correct '08').",
+      "severity": "high"
+    }
+  ]
+}
+```

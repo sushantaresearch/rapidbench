@@ -1,0 +1,1 @@
+{"failures": [{"class": "cif_usd", "evidence": "min value is 0.0, which is lower than the reference window's min of 137.420239", "severity": "high"}]}

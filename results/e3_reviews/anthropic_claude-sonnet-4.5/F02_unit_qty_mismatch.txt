@@ -1,0 +1,16 @@
+```json
+{
+  "failures": [
+    {
+      "class": "qty_extreme_outliers",
+      "evidence": "qty max increased from 12,552 to 5,640,087 (449x increase), mean increased from 213 to 10,774 (50x increase), std increased from 448 to 97,065 (216x increase), while median remains stable at ~90-97",
+      "severity": "high"
+    },
+    {
+      "class": "undervaluation_screen_distortion",
+      "evidence": "s4_undervaluation_screen_rate uses cif_usd/qty ratio. Extreme qty outliers (up to 5.6M vs reference max 12.5K) will create artificially low unit values, triggering false positives when compared to hs6 median, materially inflating the undervaluation screen rate",
+      "severity": "high"
+    }
+  ]
+}
+```

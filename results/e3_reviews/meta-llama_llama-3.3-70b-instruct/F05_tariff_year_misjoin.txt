@@ -1,0 +1,11 @@
+```json
+{
+  "failures": [
+    {
+      "class": "duty_rate",
+      "evidence": "max value in current batch (0.251212) exceeds max value in reference window (0.25) by 0.001212, potentially distorting effective duty rate and duty revenue",
+      "severity": "low"
+    }
+  ]
+}
+```

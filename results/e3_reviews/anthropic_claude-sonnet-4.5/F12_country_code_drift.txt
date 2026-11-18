@@ -1,0 +1,11 @@
+```json
+{
+  "failures": [
+    {
+      "class": "origin_cardinality_doubling",
+      "evidence": "origin_iso3 unique values increased from 20 in reference to 40 in current batch (100% increase). Top5 origin counts decreased: CHN 1418→1346, IDN 1797→1693, ITA 1629→1546, THA 1626→1546, USA 1432→1372, indicating fragmentation across more origin codes.",
+      "severity": "high"
+    }
+  ]
+}
+```

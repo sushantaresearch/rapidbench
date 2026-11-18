@@ -1,0 +1,18 @@
+{
+  "experiment": "E3",
+  "mode": "e3_mock",
+  "client": "MockReviewer",
+  "models": [
+    "mock/a"
+  ],
+  "severity": 0.05,
+  "seed": 42,
+  "temperature": 0.0,
+  "prompt_sha256_16": "6314c9546a82ef90",
+  "substrate": {
+    "kind": "synthetic",
+    "n": 20000,
+    "seed": 42
+  },
+  "generated_utc": "2026-07-02T19:17:44Z"
+}

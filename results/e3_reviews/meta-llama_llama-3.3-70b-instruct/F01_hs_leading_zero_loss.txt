@@ -1,0 +1,11 @@
+```json
+{
+  "failures": [
+    {
+      "class": "Inconsistent HS6 codes",
+      "evidence": "Top 5 HS6 codes in the current batch do not match the reference window (e.g., '014388' vs '14388')",
+      "severity": "medium"
+    }
+  ]
+}
+```

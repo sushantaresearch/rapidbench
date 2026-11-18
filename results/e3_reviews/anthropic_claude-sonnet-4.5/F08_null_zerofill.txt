@@ -1,0 +1,21 @@
+```json
+{
+  "failures": [
+    {
+      "class": "invalid_cif_value",
+      "evidence": "cif_usd min is 0.0 in current batch vs 137.42 in reference. Zero CIF values are invalid for customs declarations and will distort effective duty rate calculation (s3: duty_paid_usd.sum() / cif_usd.sum()) by artificially inflating the rate, and break undervaluation screening (s4: cif_usd / qty) with division producing zero unit values.",
+      "severity": "high"
+    },
+    {
+      "class": "duty_revenue_drop",
+      "evidence": "duty_paid_usd mean dropped from 1476.78 to 1404.28 (4.9% decrease) and median dropped from 504.60 to 448.52 (11.1% decrease) while duty_rate distribution remains identical. Combined with cif_usd mean drop from 18137.44 to 17264.17 (4.8% decrease), this indicates systematic underreporting of duty revenue relative to declared values.",
+      "severity": "high"
+    },
+    {
+      "class": "value_distribution_shift",
+      "evidence": "cif_usd unique values dropped from 20000 to 19001 (999 fewer unique values, 5% reduction) while rows remain at 20000. This suggests potential duplicate or rounded values that could distort chapter-level duty aggregations (s2) and origin share calculations (s5).",
+      "severity": "medium"
+    }
+  ]
+}
+```

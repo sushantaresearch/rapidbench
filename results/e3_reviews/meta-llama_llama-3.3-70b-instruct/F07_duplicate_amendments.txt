@@ -1,0 +1,21 @@
+```json
+{
+  "failures": [
+    {
+      "class": "Inconsistent unique values",
+      "evidence": "The number of unique values for 'decl_id' in the current batch (21000) exceeds the number of unique values in the reference window (20000)",
+      "severity": "medium"
+    },
+    {
+      "class": "Shift in top values",
+      "evidence": "The top values for 'hs6' in the current batch ('087860', '273707', '390921', '629706', '879675') differ from the top values in the reference window ('014388', '087860', '273707', '390921', '629706')",
+      "severity": "low"
+    },
+    {
+      "class": "Shift in top values",
+      "evidence": "The top values for 'chapter' in the current batch ('01', '03', '10', '29', '39') differ from the top values in the reference window ('01', '03', '10', '39', '62')",
+      "severity": "low"
+    }
+  ]
+}
+```

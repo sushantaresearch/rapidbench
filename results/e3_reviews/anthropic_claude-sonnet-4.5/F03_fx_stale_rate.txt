@@ -1,0 +1,11 @@
+```json
+{
+  "failures": [
+    {
+      "class": "chapter_derivation_logic_error",
+      "evidence": "Pipeline function s2_duty_by_chapter uses str.zfill(1) which pads to only 1 character, but then extracts [:2] for chapter. This will fail to correctly derive 2-digit chapters from hs6 codes. For example, hs6='014388' would become '014388'[:2]='01' (correct by luck), but hs6='87860' would become '87860'[:2]='87' instead of '08'. This will systematically misallocate duty revenue across chapters, severely distorting chapter shares.",
+      "severity": "high"
+    }
+  ]
+}
+```

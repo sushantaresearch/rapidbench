@@ -1,0 +1,15 @@
+```json
+{
+  "failures": [
+    {
+      "class": "Brittle Processing Logic",
+      "evidence": "The pipeline's `s2_duty_by_chapter` function uses `...str.zfill(1).str[:2]` to derive chapter from `hs6`. This logic will incorrectly convert any empty string `hs6` codes into a chapter named '0'. While the profile shows zero nulls, it does not preclude the existence of empty strings, a common data quality issue. If the current batch contains empty strings for `hs6`, this logic will misattribute duty revenue to a non-existent chapter '0', materially distorting the `s2_duty_by_chapter` output.",
+      "severity": "high"
+    },
+    {
+      "class": "Loss of Value Uniqueness",
+      "evidence": "In the reference profile, `cif_usd` and `fob_usd` values were 100% unique (20,000 unique values for 20,000 rows). In the current batch, there are only 20,000 unique values for 21,000 rows. This introduction of duplicate values is a significant deviation from the reference data's properties and could skew the median unit price calculation in the `s4_undervaluation_screen_rate` function, reducing its accuracy.",
+      "severity": "medium"
+    }
+  ]
+}

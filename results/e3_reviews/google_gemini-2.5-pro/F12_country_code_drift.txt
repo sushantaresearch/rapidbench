@@ -1,0 +1,11 @@
+```json
+{
+    "failures": [
+        {
+            "class": "Anomalous Cardinality",
+            "evidence": "The number of unique values in the `origin_iso3` column has doubled from 20 in the reference window to 40 in the current batch. This will fragment duty calculations by origin and materially distort the `s5_top_origin_duty_share` metric.",
+            "severity": "high"
+        }
+    ]
+}
+```

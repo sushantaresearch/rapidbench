@@ -1,0 +1,1 @@
+{"failures": [{"class": "label leakage", "evidence": "risk_flag agreement with outcome shifted", "severity": "high"}]}

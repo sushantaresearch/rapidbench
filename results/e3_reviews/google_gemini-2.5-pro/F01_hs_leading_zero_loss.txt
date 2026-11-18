@@ -1,0 +1,16 @@
+```json
+{
+  "failures": [
+    {
+      "class": "Identifier Formatting",
+      "evidence": "The `hs6` column, used to derive the `chapter`, has lost its leading zeros (e.g., reference '014388' is now '14388'). The pipeline's chapter derivation logic (`.str[:2]`) will incorrectly assign revenue from chapters 01-09 (e.g., chapter '01' revenue will be attributed to chapter '14'), severely distorting the `s2_duty_by_chapter` metric.",
+      "severity": "high"
+    },
+    {
+      "class": "Identifier Formatting",
+      "evidence": "The `hs6` codes, used as product identifiers for price screening, have lost leading zeros (e.g., '087860' -> '87860'). The `s4_undervaluation_screen_rate` metric relies on grouping by `hs6` to calculate median unit prices. This format change breaks the identifier's consistency, making the undervaluation screening logic unreliable and distorting the metric.",
+      "severity": "high"
+    }
+  ]
+}
+```

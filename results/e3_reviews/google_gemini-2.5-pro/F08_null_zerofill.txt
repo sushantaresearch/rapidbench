@@ -1,0 +1,11 @@
+```json
+{
+  "failures": [
+    {
+      "class": "Invalid Value",
+      "evidence": "The 'cif_usd' column in the current batch has a minimum value of 0.0, while the reference minimum is 137.42. A zero CIF value is invalid for an import. This will cause the unit price ('cif_usd' / 'qty') to be zero for affected records, artificially inflating the 's4_undervaluation_screen_rate'. It will also incorrectly deflate the total CIF value, distorting the 's3_effective_duty_rate'.",
+      "severity": "high"
+    }
+  ]
+}
+```

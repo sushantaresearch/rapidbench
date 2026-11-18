@@ -1,0 +1,11 @@
+```json
+{
+  "failures": [
+    {
+      "class": "Anomalous Column Distribution",
+      "evidence": "The statistical profile of `cif_usd` in the current batch (mean: 16796.83, median: 8950.12) is anomalous and perfectly matches the profile of `fob_usd` from the reference window (mean: 16796.83, median: 8950.12), while differing significantly from the reference `cif_usd` profile (mean: 18137.43, median: 9688.71). This indicates `fob_usd` data was likely loaded into the `cif_usd` column. This will directly understate the tax base for duty calculations (s3), leading to distorted revenue figures (s1, s2, s5) and artificially inflating the undervaluation screening rate (s4).",
+      "severity": "high"
+    }
+  ]
+}
+```

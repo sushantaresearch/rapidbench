@@ -1,0 +1,16 @@
+```json
+{
+  "failures": [
+    {
+      "class": "Stale or Duplicated Data",
+      "evidence": "The statistical profiles of numerous columns in the current batch are identical to the reference window, which is statistically impossible for new data. For example, the `qty` column profile (mean: 213.488848, std: 448.496336, etc.) and the `origin_iso3` column's value counts (e.g., 'IDN': 1797) are exact matches. This indicates the batch is not new data but a copy of old data with minor modifications to `cif_usd` and `duty_paid_usd`. This completely invalidates metrics like origin shares (s5) and risk-flag precision (s6), which will show no change from the reference period, masking real-world shifts.",
+      "severity": "high"
+    },
+    {
+      "class": "Inconsistent Data",
+      "evidence": "The `chapter` column is inconsistent with the `hs6` column. The top 5 most frequent `hs6` codes start with chapters '01', '08', '27', '39', '62'. The top 5 values in the `chapter` column are '01', '03', '10', '39', '62'. The pipeline's `s2_duty_by_chapter` metric uses `hs6`, while an analyst using the `chapter` column would get different results. This creates two conflicting versions of the 'chapter shares' analysis from the same source data.",
+      "severity": "high"
+    }
+  ]
+}
+```

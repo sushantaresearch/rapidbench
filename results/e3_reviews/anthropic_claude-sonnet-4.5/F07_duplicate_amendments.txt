@@ -1,0 +1,16 @@
+```json
+{
+  "failures": [
+    {
+      "class": "row_count_mismatch",
+      "evidence": "Current batch has 21000 rows vs reference 20000 rows (5% increase). decl_id shows 21000 unique values vs 20000 in reference, indicating 1000 extra declarations rather than duplicates.",
+      "severity": "high"
+    },
+    {
+      "class": "chapter_derivation_logic_error",
+      "evidence": "Pipeline s2_duty_by_chapter uses str.zfill(1) which pads to only 1 character, not 2. This will fail to extract proper 2-digit chapters from hs6 codes, corrupting all chapter-level duty revenue analysis.",
+      "severity": "high"
+    }
+  ]
+}
+```

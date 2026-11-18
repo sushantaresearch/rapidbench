@@ -1,0 +1,11 @@
+```json
+{
+  "failures": [
+    {
+      "class": "Incorrect Chapter Derivation",
+      "evidence": "The pipeline's `s2_duty_by_chapter` function derives the customs 'chapter' by taking the first two digits of the `hs6` code. However, the input data also contains a dedicated `chapter` column, and its values are inconsistent with this derivation. For example, in the reference profile, the top `hs6` codes begin with '01', '08', '27', '39', and '62', but the top values in the `chapter` column are '01', '03', '10', '39', and '62'. This indicates a systematic mismatch between the pipeline's logic and the data's semantic structure. As a result, the calculated `chapter shares` (s2) will be incorrect and will not reflect the chapter distribution intended by the source data.",
+      "severity": "high"
+    }
+  ]
+}
+```

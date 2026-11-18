@@ -1,0 +1,21 @@
+```json
+{
+  "failures": [
+    {
+      "class": "duty_rate_domain_violation",
+      "evidence": "duty_rate max is 0.251212 (exceeds schema-implied maximum of 0.25); unique count increased from 10 to 15 suggesting contamination or incorrect rate application",
+      "severity": "high"
+    },
+    {
+      "class": "duty_rate_distribution_shift",
+      "evidence": "duty_rate median shifted from 0.05 to 0.058219 (16.4% increase) and mean from 0.082159 to 0.083574, indicating systematic rate inflation that will distort effective duty rate calculations",
+      "severity": "medium"
+    },
+    {
+      "class": "duty_paid_usd_inconsistency",
+      "evidence": "duty_paid_usd max decreased from 207915.54 to 173888.75 (-16.4%) while mean increased 1.4% and cif_usd is identical; inconsistent with duty_rate increase, suggests calculation error or capping issue",
+      "severity": "high"
+    }
+  ]
+}
+```

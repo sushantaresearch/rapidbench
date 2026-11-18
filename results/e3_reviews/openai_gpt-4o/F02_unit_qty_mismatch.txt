@@ -1,0 +1,11 @@
+```json
+{
+    "failures": [
+        {
+            "class": "qty",
+            "evidence": "The maximum value of 'qty' in the current batch is 5640087.481487, which is significantly higher than the maximum value of 12552.478844 in the reference window.",
+            "severity": "high"
+        }
+    ]
+}
+```

@@ -1,0 +1,29 @@
+out_dir: results
+seeds:
+- 42
+- 43
+- 44
+- 45
+- 46
+severities:
+- 0.01
+- 0.05
+- 0.2
+substrates:
+  synthetic:
+    enabled: false
+    n: 20000
+  comtrade:
+    enabled: false
+    path: data/comtrade_extract.csv
+  date:
+    enabled: true
+    path: data/date_synthetic.csv
+  ctgan:
+    enabled: true
+    path: data/ctgan_declarations.csv
+validators:
+  rules: true
+  evidently: true
+  gx: false
+  llm_reviewer: false

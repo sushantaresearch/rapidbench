@@ -1,0 +1,16 @@
+model,sample,verdict,ok,rdm_s1,rdm_s2,rdm_s3,rdm_s4,rdm_s5,code_sha,runtime_s,error
+openai/gpt-4o,0,correct,True,0.0,0.0,0.0,0.0,0.0,560234ae5ed2,5.47,
+openai/gpt-4o,1,correct,True,0.0,0.0,0.0,0.0,0.0,fd82c47c9e53,4.97,
+openai/gpt-4o,2,correct,True,0.0,0.0,0.0,0.0,0.0,419dfe794107,5.07,
+anthropic/claude-sonnet-4.5,0,correct,True,0.0,0.0,0.0,0.0,0.0,2adbde5deb39,7.95,
+anthropic/claude-sonnet-4.5,1,correct,True,0.0,0.0,0.0,0.0,0.0,f3056cb9c574,7.96,
+anthropic/claude-sonnet-4.5,2,correct,True,0.0,0.0,0.0,0.0,0.0,f3056cb9c574,7.01,
+google/gemini-2.5-pro,0,correct,True,0.0,0.0,0.0,0.0,0.0,b1dfd69482fc,55.78,
+google/gemini-2.5-pro,1,correct,True,0.0,0.0,0.0,0.0,0.0,09adffaac619,45.25,
+google/gemini-2.5-pro,2,crash,False,,,,,,541b439651f4,74.01,exit 1: SyntaxError: invalid syntax
+meta-llama/llama-3.3-70b-instruct,0,"defective:s4_uv_below_half_median_share,s5_top_origin_duty_share",True,0.0,0.0,0.0,99.0,99.0,357f96ab94cf,6.06,
+meta-llama/llama-3.3-70b-instruct,1,"defective:s4_uv_below_half_median_share,s5_top_origin_duty_share",True,0.0,0.0,0.0,99.0,99.0,0809ae6a7622,17.22,
+meta-llama/llama-3.3-70b-instruct,2,correct,True,0.0,0.0,0.0,0.0,0.0,98930d2fc49a,8.09,
+deepseek/deepseek-chat,0,correct,True,0.0,0.0,0.0,0.0,0.0,eda7ab179677,8.38,
+deepseek/deepseek-chat,1,correct,True,0.0,0.0,0.0,0.0,0.0,8ca5cdf3eeb7,8.33,
+deepseek/deepseek-chat,2,correct,True,0.0,0.0,0.0,0.0,0.0,2c4d5ee17847,10.53,
