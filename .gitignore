@@ -1,0 +1,5 @@
+__pycache__/
+.pytest_cache/
+*.env
+# third-party substrates: fetch with data/fetch_substrates.sh
+data/*.csv

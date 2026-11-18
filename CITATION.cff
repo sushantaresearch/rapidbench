@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it and the paper below."
+title: "RAPID-Bench: replication archive"
+version: "1.7"
+license: MIT
+authors:
+  - family-names: Paul
+    given-names: Sushanta
+    orcid: "https://orcid.org/0009-0007-8071-6971"
+    affiliation: "National Board of Revenue, Bangladesh"
+preferred-citation:
+  type: conference-paper
+  title: "Silent Data-Quality Failures in AI-Generated Revenue-Analytics Pipelines: An Error-Injection Benchmark"
+  authors:
+    - family-names: Paul
+      given-names: Sushanta
+    - family-names: Chowdhury
+      given-names: Shoumya
+    - family-names: Das
+      given-names: Anmita
+  conference:
+    name: "29th International Conference on Computer and Information Technology (ICCIT 2026)"
+  year: 2026

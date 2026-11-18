@@ -1,0 +1,8 @@
+pandas>=2.2
+numpy>=1.26
+pyyaml>=6.0
+evidently>=0.7          # V2 drift tier (smoke-tested at 0.7.21)
+great_expectations>=1.18   # V1b tool-native rules (run at 1.18.2)
+# optional
+# requests>=2.31            # V3 LLM reviewer via OpenRouter
+pytest>=8.0
